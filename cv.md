@@ -15,6 +15,7 @@ ___
 - Git, GitHub
 - VS code
 - FIgma
+- JS
 ___
 ####Code example:
 ```
