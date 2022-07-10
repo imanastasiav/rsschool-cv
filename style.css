@@ -1,27 +1,52 @@
+html {
+    scroll-behavior: smooth; 
+  }
+* {
+    box-sizing: border-box;
+}
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-family: 'Roboto', sans-serif;
-    min-height: 100vh;
-    margin: 0px;
-    padding: 0px;
-@font-face {
-    font-family: Roboto;
-     src: url("assets/fonts/Roboto.ttf");
-   }
-@font-face {
-    font-family: Roboto;
-    src: url("/assets/fonts/Roboto-Bold.ttf");
-    font-weight: 100;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #4d2323;
 }
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
 }
-    *{
-        box-sizing: border-box;
-    }
 .header {
+        background-color: #829985;
         border: 1px solid red;
     }
+
+.nav-list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        list-style: none;
+}
+.nav-link {
+        position: relative;
+        padding: 0px 12px;
+        line-height: 50px;
+        font-size: 20px;
+        font-weight: 300;
+        color: #fff;
+        text-decoration: none;
+}
+.nav-item :hover {
+        color: aqua;
+}
+
 .main {
         border: 1px solid red;
+        background: #F5F2E9;
     }
 .footer {
         border: 1px solid red;
+        background: #829985;
     }
