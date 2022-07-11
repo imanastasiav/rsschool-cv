@@ -10,7 +10,7 @@ body {
     justify-content: space-between;
     min-height: 100vh;
     min-width: 320px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0px;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
@@ -26,25 +26,46 @@ body {
 .header {
         background-color: #829985;
         border: 1px solid red;
-    }
-
+}
 .nav-list {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
 }
 .nav-link {
-        position: relative;
-        padding: 0px 12px;
-        line-height: 50px;
-        font-size: 20px;
-        font-weight: 300;
-        color: #fff;
-        text-decoration: none;
+    position: relative;
+    padding: 0 12px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #fff;
 }
-.nav-item :hover {
-        color: aqua;
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    bottom: -5px;
+    width: calc(100% - 24px);
+    height: 2px;
+    background-color: #fff; 
+    opacity: 0; 
+    transition: .5s;
+}
+.nav-link:hover::after {
+    opacity: 1;
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes slide {
+    from {
+        width: 0;
+    }
+    to {
+        width: calc(100% - 24px);
+    }
 }
 .main {
         border: 1px solid red;
