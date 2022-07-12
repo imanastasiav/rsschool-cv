@@ -70,7 +70,22 @@ body {
 .main {
         border: 1px solid red;
         background: #F5F2E9;
+        margin-bottom: auto;
     }
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.section {
+    width: calc(50% - 20px);
+    padding: 10px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #672f2f;
+}
+.section-education, .section-english {
+    border-bottom: 0;
+}
 .section-profile {
     display: flex;
     justify-content: space-around;
@@ -78,11 +93,62 @@ body {
     padding: 50px 30px 35px;
     border-bottom: 15px solid #d7d1c9;
 }
-.profile-logo {
+.section-title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #829985;
+}
+.section-profile-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-transform: uppercase;
+} 
+.main-title {
+    position: relative;
+    padding: 0;
+    margin-bottom: 20px;
+    color: #4d2323;
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 10px;
+    line-height: 50px;
+    word-spacing: 3px;
+}
+.main-title::after {
+    content: "";
+    position: absolute;
+    bottom: -19px;
+    left: 50%;
+    margin-left: -70px;
+    width: 140px;
+    height: 2px;
+    background-color: #829985;
+  }
+  .profile-subtitle {
+    margin-top: 20px;
+    color: #5c5c5c;
+    line-height: 50px;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+.section-profile-logo {
     width: 200px;
     height: 200px;
-}
-
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    filter: grayscale(0.2) brightness(1.05);
+    transition: .3s;
+  }
+  .section-profile-logo:hover {
+    filter: none;
+  }
+  
 .footer {
         border: 1px solid red;
         background: #829985;
